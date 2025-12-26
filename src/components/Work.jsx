@@ -34,7 +34,7 @@ const Work = () => {
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500/50 to-transparent"></div>
 
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 ml-0.5 text-purple-300 text-xs font-mono mb-8 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 ml-0.5 text-purple-300 text-xs font-sans mb-8 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
                                     <span className="relative flex h-2 w-2">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>

@@ -58,7 +58,7 @@ const Terminal = () => {
             <div className="w-full max-w-3xl">
 
                 <div className="text-center mb-12">
-                    <p className="text-purple-500 font-mono text-sm mb-2">Developers Only</p>
+                    <p className="text-purple-500 font-sans text-sm mb-2">Developers Only</p>
                     <h2 className="text-3xl md:text-4xl font-bold text-white">Command Line Interface</h2>
                 </div>
 
@@ -66,7 +66,7 @@ const Terminal = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-[#0c0c0c] border border-white/10 rounded-xl overflow-hidden shadow-2xl font-mono text-sm md:text-base w-full"
+                    className="bg-[#0c0c0c] border border-white/10 rounded-xl overflow-hidden shadow-2xl font-sans text-sm md:text-base w-full"
                 >
                     {/* Window Title Bar */}
                     <div className="bg-[#1a1a1a] px-4 py-3 flex items-center justify-between border-b border-white/5">
@@ -129,7 +129,7 @@ const Terminal = () => {
 
                 </motion.div>
 
-                <p className="text-center text-gray-600 font-mono text-xs mt-6">
+                <p className="text-center text-gray-600 font-sans text-xs mt-6">
                     Try commands like <span className="text-purple-500">help</span>, <span className="text-purple-500">bio</span>, or <span className="text-purple-500">whoami</span>
                 </p>
             </div>

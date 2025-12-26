@@ -7,7 +7,7 @@ const Lifestyle = () => {
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="mb-16">
-                    <span className="text-purple-500 font-mono text-xs uppercase tracking-widest">Personal</span>
+                    <span className="text-purple-500 font-sans text-xs uppercase tracking-widest">Personal</span>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
                         Beyond the <span className="text-gray-600">Keyboard</span>
                     </h2>
