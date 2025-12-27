@@ -68,7 +68,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-gray-400 text-lg md:text-base mb-2 font-medium leading-relaxed"
+                            className="text-gray-400 text-sm md:text-base mb-2 font-medium leading-relaxed"
                         >
                             A Designer who
                         </motion.p>
@@ -77,7 +77,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="text-4xl md:text-4xl font-bold tracking-wide text-white leading-[1.2] mb-4"
+                            className="text-2xl md:text-4xl font-bold tracking-wide text-white leading-[1.2] mb-4"
                         >
                             Judges a book <br />
                             by its <span className="relative inline-block z-10">
@@ -93,7 +93,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="text-gray-400 text-xs md:text-xs max-w-sm leading-relaxed"
+                            className="text-gray-400 text-[10px] md:text-xs max-w-sm leading-relaxed"
                         >
                             Because if the cover does not impress you what else can?
                         </motion.p>
