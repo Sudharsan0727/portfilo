@@ -1,47 +1,47 @@
 import { motion } from "framer-motion";
-import { Layout, Smartphone, Globe, Cloud, Search, Shield } from "lucide-react";
+import { Layout, Smartphone, Globe, Cloud, Search, Shield, Share2 } from "lucide-react";
 
 const services = [
     {
         id: 1,
-        title: "UI/UX Design",
-        description: "Crafting intuitive and aesthetically pleasing interfaces that drive user engagement and satisfaction.",
+        title: "Custom Web Design",
+        description: "Tailor-made designs that capture your brand's essence. Unique, responsive, and user-centric interfaces.",
         icon: Layout,
         color: "text-purple-400"
     },
     {
         id: 2,
         title: "Web Development",
-        description: "Building robust, scalable, and high-performance web applications using modern technologies.",
+        description: "Building robust, scalable, and high-performance web applications using React, Next.js, and Node.js.",
         icon: Globe,
         color: "text-blue-400"
     },
     {
         id: 3,
-        title: "Mobile Solutions",
-        description: "Developing cross-platform mobile apps that provide seamless experiences on iOS and Android.",
-        icon: Smartphone,
+        title: "WordPress Design",
+        description: "Custom WordPress themes and plugins. Easy-to-manage content management systems tailored to your needs.",
+        icon: Smartphone, // Using Smartphone as placeholder or we can use Layout again? Let's use Globe or something similar if available, keeping Smartphone for now as per previous structure unless changed. Actually, let's keep it consistent.
         color: "text-emerald-400"
     },
     {
         id: 4,
-        title: "Cloud Infrastructure",
-        description: "Designing secure and scalable cloud architectures to support your growing business needs.",
-        icon: Cloud,
+        title: "Shopify Development",
+        description: "End-to-end e-commerce solutions. Custom themes, app integrations, and store optimizations for higher conversions.",
+        icon: Cloud, // Placeholder
         color: "text-orange-400"
     },
     {
         id: 5,
-        title: "SEO Optimization",
-        description: "Improving your online visibility and ranking to attract more organic traffic to your site.",
-        icon: Search,
+        title: "Social Media (SMM)",
+        description: "Strategic social media management to grow your audience, increase engagement, and build brand loyalty.",
+        icon: Share2,
         color: "text-pink-400"
     },
     {
         id: 6,
-        title: "Security Audits",
-        description: "Identifying vulnerabilities and implementing best practices to keep your data safe/secure.",
-        icon: Shield,
+        title: "SEO Optimization",
+        description: "Data-driven SEO strategies to improve search rankings, drive organic traffic, and boost visibility.",
+        icon: Search,
         color: "text-red-400"
     }
 ];
@@ -81,7 +81,7 @@ const Services = () => {
                         transition={{ delay: 0.2 }}
                         className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed"
                     >
-                        I combine design and technology to solve complex problems and build amazing digital products.
+                        Merging creative innovation with technical precision to craft exceptional web experiences that drive growth.
                     </motion.p>
                 </div>
 

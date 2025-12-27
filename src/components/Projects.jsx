@@ -1,52 +1,58 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, Github, ArrowRight } from "lucide-react";
 
-const projects = [
+export const projects = [
     {
         id: "01",
-        title: "Sonic Analytics",
-        category: "AI Platform",
-        description: "A real-time audio intelligence visualization engine. It processes millions of data points to create stunning visual representations of sound waves.",
-        image: "https://images.unsplash.com/photo-1614149162883-504ce4d13909?q=80&w=2548&auto=format&fit=crop",
-        tags: ["Python", "React", "D3.js"],
-        year: "2024"
+        title: "DAC Developers",
+        category: "Construction",
+        description: "The Human Centric Construction Company. A visually immersive corporate website for a leading builder, emphasizing their core values and property portfolio.",
+        image: "/dac-developers.png",
+        tags: ["WordPress", "SQL", "PHP"],
+        year: "2024",
+        link: "http://dacdevelopers.com/"
     },
     {
         id: "02",
-        title: "Nebula Stream",
-        category: "Infrastructure",
-        description: "Global low-latency 4K delivery network optimized for edge computing. Delivers content to millions of users with sub-millisecond latency.",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop",
-        tags: ["Go", "Docker", "K8s"],
-        year: "2023"
+        title: "Chennai Media",
+        category: "Digital Marketing",
+        description: "A premier influencer marketing platform connecting brands with Chennai's top digital creators. Facilitates seamless collaboration, campaign management, and brand growth strategies.",
+        image: "/chennai-media.png",
+        tags: ["WordPress", "SQL", "PHP"],
+        year: "2023",
+        link: "https://chennaimedia.in/"
     },
     {
         id: "03",
-        title: "Aura System",
-        category: "Design System",
-        description: "Comprehensive enterprise UI kit with atomic design principles. Used by over 50 internal teams to build consistent products.",
-        image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2670&auto=format&fit=crop",
-        tags: ["Figma", "React", "Storybook"],
-        year: "2023"
+        title: "Nexto Digital",
+        category: "Digital Agency",
+        description: "Transform Your Digital Presence. We craft premium web experiences, mobile apps, and digital strategies that drive real business results.",
+        image: "/nexto-digital.png",
+        tags: ["Vite", "React", "Node.js", "Tailwind CSS"],
+        year: "2023",
+        link: "http://nextodigital.in/"
     },
     {
         id: "04",
-        title: "CryptoVault",
-        category: "Web3",
-        description: "DeFi yield aggregator with smart contract automation. Securely manages over $10M in value locked across multiple chains.",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2664&auto=format&fit=crop",
-        tags: ["Solidity", "Hardhat", "Ethers"],
-        year: "2022"
+        title: "Nexto Events",
+        category: "Event Platform",
+        description: "A comprehensive event booking system. Users can discover, filter, and book tickets for events with a seamless checkout experience.",
+        image: "/nexto-events.png",
+        tags: ["Vite React", "Node.js", "PostgreSQL", "Redis Cache"],
+        year: "2024",
+        link: "https://events.chennaimedia.in/"
     },
     {
         id: "05",
-        title: "Quantum UI",
-        category: "Animation",
-        description: "Physics-based interaction library for modern web applications. Brings lifelike gravity and friction to DOM elements.",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
-        tags: ["Motion", "WebGL", "Three.js"],
-        year: "2022"
+        title: "MJS Traders",
+        category: "E-Commerce",
+        description: "Experience the bold, aromatic flavor of premium spice trading. A direct-to-consumer e-commerce platform for high-quality spices.",
+        image: "/mjs-traders.png",
+        tags: ["Wordpress", "Custom code", "E-commerce"],
+        year: "2024",
+        link: "https://mjstraders.co.in/"
     }
 ];
 
@@ -60,12 +66,12 @@ const Projects = () => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
 
                 {/* Left Column: Sticky Content */}
-                <div className="hidden md:flex w-1/2 h-screen sticky top-0 flex-col justify-center px-12 py-12">
+                <div className="hidden md:flex w-full md:w-[40%] h-screen sticky top-0 flex-col justify-center px-6 py-12">
                     <div className="relative h-full flex flex-col justify-center">
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                className={`absolute inset-x-0 transition-all duration-500 ease-in-out flex flex-col justify-center ${activeId === project.id ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-12 pointer-events-none'}`}
+                                className={`absolute inset-x-0 transition-all duration-700 ease-in-out flex flex-col justify-center ${activeId === project.id ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-8 pointer-events-none'}`}
                             >
                                 <div className="flex items-center gap-4 mb-6">
                                     <span className="text-purple-500 text-sm tracking-widest uppercase font-medium">/{project.id}</span>
@@ -77,7 +83,7 @@ const Projects = () => {
                                     {project.title}
                                 </h2>
 
-                                <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-md mb-8">
+                                <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-md mb-8 text-justify">
                                     {project.description}
                                 </p>
 
@@ -90,21 +96,34 @@ const Projects = () => {
                                 </div>
 
                                 <div>
-                                    <button className="flex items-center gap-3 text-white border-b border-white/30 pb-1 hover:border-purple-500 transition-colors group">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white transition-colors group">
                                         <span className="text-lg">View Case Study</span>
                                         <ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    <div className="absolute bottom-12 left-6 z-20">
+                        <Link
+                            to="/all-projects"
+                            className="relative w-full md:w-auto text-center overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group inline-block"
+                        >
+                            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-3 text-sm font-medium text-white backdrop-blur-3xl transition-all group-hover:bg-slate-900 gap-2">
+                                Explore More Work
+                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            </span>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Right Column: Scrolling Images */}
-                <div className="w-full md:w-1/2 flex flex-col gap-24 py-24 px-4 md:px-12">
+                <div className="w-full md:w-[60%] flex flex-col gap-32 md:gap-48 lg:gap-64 py-20 md:py-48 px-4">
                     {/* Header for Mobile */}
-                    <div className="md:hidden mb-8">
-                        <h2 className="text-3xl font-bold text-white mb-2">Selected Works</h2>
+                    <div className="md:hidden mb-1 text-center">
+                        <h2 className="text-3xl font-bold text-white">Selected Works</h2>
                     </div>
 
                     {projects.map((project) => (
@@ -115,11 +134,15 @@ const Projects = () => {
                         />
                     ))}
 
+
+
                     {/* Spacer for bottom scrolling */}
                     <div className="h-[20vh] hidden md:block"></div>
                 </div>
 
             </div>
+
+
         </section>
     );
 };
@@ -140,29 +163,29 @@ const ProjectImage = ({ project, setActiveId }) => {
         <motion.div
             ref={ref}
             onViewportEnter={() => setActiveId(project.id)}
-            viewport={{ margin: "-50% 0px -50% 0px" }} // Triggers when element is in the middle 50% of screen
+            viewport={{ margin: "-45% 0px -45% 0px" }} // Much tighter center-sync for tablet alignment
             className="group relative"
         >
             {/* Mobile Title (Since Sticky Left is hidden on mobile) */}
-            <div className="md:hidden mb-6">
-                <span className="text-purple-500 text-xs tracking-widest uppercase mb-2 block font-medium">{project.category}</span>
+            <div className="md:hidden mb-4 text-left">
+                <span className="text-purple-500 text-xs tracking-widest uppercase mb-1 block font-medium">{project.category}</span>
                 <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
             </div>
 
-            <div className="sticky top-24 md:static aspect-[4/5] md:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-[#0A0A0A] border border-white/10">
+            <div className="sticky top-24 md:static aspect-video w-full rounded-2xl overflow-hidden bg-[#0A0A0A] border border-white/10 flex items-center justify-center">
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    className="w-full h-full object-contain object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
 
                 {/* Overlay for mobile mainly */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent md:hidden"></div>
                 <div className="absolute bottom-6 left-6 md:hidden">
-                    <button className="px-4 py-2 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider">
                         View Project
-                    </button>
+                    </a>
                 </div>
             </div>
         </motion.div>

@@ -7,7 +7,7 @@ const commands = {
     whoami: "User: Sudharsan | Role: Creative Developer | Status: Online",
     bio: "I'm a software engineer passionate about building digital products that look good and perform even better.",
     skills: "Frontend: React, Next.js, Tailwind\nBackend: Node.js, Express\nDesign: Figma, Framer",
-    contact: "Email: contact@example.com | Twitter: @sudharsan",
+    contact: "Email: contactsudharsank@gmail.com | Twitter: @sudharsan",
     projects: "Check out the projects section above!",
     sudo: "Permission denied: You need to say 'please' (just kidding, admin access restricted).",
     clear: "CLEAR_ACTION"

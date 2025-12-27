@@ -11,8 +11,8 @@ const Skills = () => {
         return (
             <div className="relative group cursor-pointer pointer-events-auto">
                 <div className="absolute inset-0 bg-white/5 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-[#140f21] border border-white/5 rounded-full flex items-center justify-center relative z-10 group-hover:bg-[#1a1429] transition-colors hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                    <Icon className="text-xl md:text-3xl transition-transform group-hover:scale-110" style={{ color }} />
+                <div className="w-9 h-9 md:w-14 md:h-14 bg-[#140f21] border border-white/5 rounded-full flex items-center justify-center relative z-10 group-hover:bg-[#1a1429] transition-colors hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                    <Icon className="text-lg md:text-3xl transition-transform group-hover:scale-110" style={{ color }} />
                 </div>
                 {/* Tooltip */}
                 <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs text-stone-300 pointer-events-none whitespace-nowrap bg-black/80 px-2 py-1 rounded">
@@ -143,9 +143,14 @@ const Skills = () => {
                     <Orbit radius={330} duration={45} icons={outerIcons} />
                 </div>
 
-                {/* Mobile View - Single Dense Ring */}
+                {/* Mobile View - Scaled Orbits */}
                 <div className="block md:hidden">
-                    <Orbit radius={140} duration={30} icons={[...innerIcons.slice(0, 3), ...outerIcons.slice(0, 3)]} />
+                    {/* Inner Ring - Mobile */}
+                    <Orbit radius={55} duration={20} icons={innerIcons} />
+                    {/* Middle Ring - Mobile */}
+                    <Orbit radius={110} duration={30} icons={middleIcons} reverse={true} />
+                    {/* Outer Ring - Mobile */}
+                    <Orbit radius={165} duration={40} icons={outerIcons} />
                 </div>
 
             </div>

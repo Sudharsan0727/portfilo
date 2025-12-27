@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Layout, Database, GitBranch, Terminal, Cpu, Globe, Zap, Code2 } from "lucide-react";
+import { Server, Layout, Database, GitBranch, Terminal, Globe, Zap, Code2, ShoppingBag } from "lucide-react";
 
 const Work = () => {
     return (
@@ -47,13 +47,11 @@ const Work = () => {
                                 </h3>
                                 <div className="text-xl text-white/50 mb-8 font-light flex items-center gap-2">
                                     <Code2 size={20} className="text-purple-400" />
-                                    <span>TechSolutions Inc.</span>
+                                    <span>Freelancer</span>
                                 </div>
 
-                                <p className="text-gray-300 leading-relaxed mb-8">
-                                    Orchestrated end-to-end development of scalable web applications.
-                                    Specialized in building robust backend architectures while delivering
-                                    pixel-perfect frontend experiences.
+                                <p className="text-gray-300 leading-relaxed mb-8 text-justify">
+                                    Delivering high-performance web solutions for diverse clients. From custom <span className="whitespace-nowrap">e-commerce</span> stores to complex web applications, I ensure every project is built for speed, scalability, and success.
                                 </p>
                             </div>
 
@@ -61,13 +59,13 @@ const Work = () => {
                             <div>
                                 <h4 className="text-xs font-bold text-purple-300 mb-4 uppercase tracking-widest pl-1">Core Stack</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {["React", "Node.js", "PostgreSQL", "AWS", "TypeScript"].map((tech) => (
+                                    {["React", "Next.js", "Node.js", "PostgreSQL", "WordPress", "Shopify"].map((tech) => (
                                         <span key={tech} className="px-4 py-2 bg-black/40 border border-white/10 rounded-xl text-gray-200 text-sm flex items-center gap-2 hover:bg-white/10 hover:border-purple-500/30 transition-all cursor-default shadow-sm backdrop-blur-md">
-                                            {tech === "React" && <Layout size={14} className="text-blue-400" />}
+                                            {(tech === "React" || tech === "Next.js") && <Layout size={14} className={tech === "Next.js" ? "text-white" : "text-blue-400"} />}
                                             {tech === "Node.js" && <Server size={14} className="text-green-400" />}
                                             {tech === "PostgreSQL" && <Database size={14} className="text-blue-300" />}
-                                            {tech === "AWS" && <Globe size={14} className="text-orange-400" />}
-                                            {tech === "TypeScript" && <Cpu size={14} className="text-blue-500" />}
+                                            {tech === "WordPress" && <Globe size={14} className="text-blue-500" />}
+                                            {tech === "Shopify" && <ShoppingBag size={14} className="text-green-500" />}
                                             {tech}
                                         </span>
                                     ))}

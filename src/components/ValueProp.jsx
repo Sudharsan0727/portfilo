@@ -9,10 +9,10 @@ const ValueProp = () => {
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                     <div>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                            Engineering <span className="text-purple-500">Excellence</span>
+                            Digital <span className="text-purple-500">Impact</span>
                         </h2>
                         <p className="text-gray-400 max-w-xl text-lg">
-                            Results-driven development. I focus on the metrics that actually matter to your business and your users.
+                            I build more than just websites. I create high-converting digital experiences designed to scale efficiently and perform flawlessly.
                         </p>
                     </div>
 
@@ -21,7 +21,7 @@ const ValueProp = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[minmax(380px,auto)]">
 
                     {/* Card 1: Speed (Large) */}
                     <motion.div
@@ -81,8 +81,8 @@ const ValueProp = () => {
                             <Code size={24} className="text-green-400" />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Clean Code</h3>
-                        <p className="text-gray-400 text-sm">
-                            Maintainable, scalable, and documented codebases that your team will love to work with.
+                        <p className="text-gray-400">
+                            I write clean, maintainable, and well-documented code that scales seamlessly. By adhering to industry standards, I ensure future developers will love working on your project as much as I do.
                         </p>
                     </motion.div>
 
@@ -95,8 +95,8 @@ const ValueProp = () => {
                             <ShieldCheck size={24} className="text-red-400" />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Secure</h3>
-                        <p className="text-gray-400 text-sm">
-                            Implementation of security best practices including headers, encryption, and safe data handling.
+                        <p className="text-gray-400">
+                            I implement robust security protocols to protect your data. From SSL encryption to secure authentication flows and strict data policies, I safeguard your digital assets against all vulnerabilities.
                         </p>
                     </motion.div>
 
